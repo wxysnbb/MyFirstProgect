@@ -1,0 +1,69 @@
+一.获取xml文件
+1.创建解析器
+SAXReader reader=new SAXReader()；
+2.获取xml文档
+document=reader.read("项目路径");
+3.获取根节点
+rootNode=document.getRootElement();
+
+二.把内存中的xml保存到硬盘中的xml
+1.格式化文档
+OutputFormat format=OutputFormat.createPrettyFormat();
+2.创建输出流对象
+XMLWriter writer=new XMLWriter();
+3.调用write方法来写入
+writer.write(document);
+4.关闭流
+writer.close();
+
+三.查看全部
+1.用迭代器遍历根节点下所有的一级子元素
+Iterator<Element> book=rootNode.elementIterator();
+2.循环输出
+while(book.hasNxet()){
+    Element bookz=book.next();
+    .........输出.......
+    Iterator<Element> bookv= bookz.elementIterator();
+    while(bookv.hasNext()){
+       Element bookvv bookv.next();
+       bookvv.attributeValue("id");
+    }
+  }
+
+四.添加
+1.先从根节点下创建
+Element bookId=rootNode.addElememt("bookId");
+2.为bookId添加属性值
+bookId.addAttribute("id","zzh");
+3.为bookId添加子节点
+Element bookName=bookId.addElement("bookName");
+4.为bookName添加属性值
+bookName.addAttibute("id","hh");
+
+五.删除
+1.遍历集合
+Element<Element> books=rootNode.elementIterator();
+while(books.hasNext()){
+    Element bookz=books.next();
+    if(bookz.attributeValue("id").equals("hh")){
+        rootNode.remove(bookz);
+    }
+}
+
+六.修改
+1.遍历集合
+Iterator books=rootNode.elementIterator();
+while(books.hasNext()){
+    Element bookz=books.next()
+    if(bookz.attributeValue("id").equals("yzw")){
+        bookz.setAttributeValue("id","hhd");
+    }
+}
+
+
+
+
+
+
+
+

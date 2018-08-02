@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<book>
+    <bookId id="1">
+        <bookName id="吔宗伟" name="yzw">宗伟的拳皇之路</bookName>
+    </bookId>
+    <bookId id="2">
+        <bookName id="凤山" name="xfs">凤山是怎样练成的</bookName>
+    </bookId>
+    <bookId id="3">
+        <bookName id="狗阿辉" name="gah">我是阿辉</bookName>
+    </bookId>
+</book>
